@@ -1,1 +1,193 @@
 /* font-family: 'Space Grotesk', sans-serif; */
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-size: 1.125rem;
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+    font-weight: 500;
+}
+
+
+.container {
+    max-width: 500px;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+
+/* =================
+    Cards Sections
+   ================= */
+
+.card {
+    background-color: darkblue;
+    background-image: url(./images/bg-main-mobile.png);
+    padding: 1em;
+    background-position: center;
+    background-size: cover;
+    height: 230px;
+    color: #fff;
+    position: relative;
+    margin-bottom: 4em;
+}
+
+.card-number-img,
+.card-info-img,
+.cvc-img,
+.card-logo {
+    position: absolute;
+    color: hsl(270, 3%, 87%);
+}
+
+.back-card,
+.front-card {
+    max-width: 280px;
+    position: absolute;
+    border-radius: 5px;
+}
+
+
+.back-card > img,
+.front-card-img {
+    width: 100%;
+    display: block;
+}
+
+
+/* Back Card */
+
+
+.back-card  {
+    top: 25px;
+    right: 15px;
+    font-size: 0.75rem;
+}
+
+.cvc-img {
+    position: absolute;
+    top: 55px;
+    right: 35px;
+    letter-spacing: 2px;
+}
+
+
+/* Front Card */
+
+.front-card {
+    top: 112px;
+    left: 10px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-logo {
+    top: 20px;
+    left: 20px;
+    width: 55px;
+}
+
+.card-number-img {
+    bottom: 30px;
+    left: 20px;
+    letter-spacing: 2px;
+}
+
+.card-info-img {
+    bottom: 5px;
+    display: flex;
+    font-size: 0.70rem;
+    justify-content: space-between;
+    width: 85%;
+    left: 20px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+/* ==================
+    Form Section
+   ==================*/
+
+input {
+    padding: 0.5em;
+    font-family: 'Space Grotesk', sans-serif;
+    color: hsl(278, 68%, 11%);
+    font-size: 1rem;
+    border: 1px solid hsl(279, 6%, 55%);
+    border-radius: 7px;
+}
+
+/* FIX:: input border must be a gradient and round from corners */
+
+input:hover,
+input:focus {
+    border-image-width: 2px;
+    border-image-source: linear-gradient(to right,hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    border-image-slice: 1%;
+    outline: none;
+}
+
+.form {
+    display: grid;
+    gap: .5em;
+    padding: 0 1em;
+    
+}
+
+.form label {
+    color: hsl(278, 68%, 11%);
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.card-extra-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-areas: 
+        "exp exp cvcL"
+        "mm  yy  cvcI";
+    gap: 0.5em;
+}
+
+.card-extra-details > input {
+    width: 100%;
+}
+
+.exp-label {
+    grid-area: exp;
+}
+
+.exp-mm {
+    grid-area: mm;
+}
+
+.exp-yy {
+    grid-area: yy;
+}
+
+.cvc-label {
+    grid-area: cvcL;
+}
+
+.cvc-input {
+    grid-area: cvcI;
+}
+
+.btn-primary {
+    border-radius: 7px;
+    background-color: hsl(278, 68%, 11%);
+    color: #fff;
+    padding: 1em;
+    font-weight: 700;
+    border: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    background-image: linear-gradient(to right,hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+}

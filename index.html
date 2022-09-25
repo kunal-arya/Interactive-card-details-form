@@ -9,13 +9,55 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"> 
 
   <link rel="stylesheet" href="style.css">
   <script src="./script.js" defer></script>
   <title>Interactive card details form</title>
 </head>
 <body>
+  <main class="main">
+    <section class="card">
+      <div class="container">
+        <div class="back-card">
+          <img src="./images/bg-card-back.png" alt="credit card front side view">
+          <p class="cvc-img">000</p>
+        </div>
   
+        <div class="front-card">
+          <img class="front-card-img" src="./images/bg-card-front.png" alt="credit card front side view">
+          <img class="card-logo" src="./images/card-logo.svg">
+          <p class="card-number-img">0000 0000 0000 0000</p>
+          <div class="card-info-img">
+            <p class="card-name-img">Kunal arya</p>
+            <p class="card-exp-img">08/28</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="form-section">
+      <div class="container">
+        <form class="form">
+          <label for="cardholder-name">CARDHOLDER NAME</label>
+          <input type="text" id="cardholder-name" placeholder="e.g. Kunal Arya">
+  
+          <label for="card-num">CARD NUMBER</label>
+          <input type="text" id="card-num" placeholder="e.g. 1234 5678 9123 0000">
+
+          <div class="card-extra-details">
+              <label class="exp-label">EXP. DATE ( MM / YY )</label>
+              <input class="exp-mm" type="number" aria-label="expiry month" placeholder="MM" maxlength="2">
+              <input class="exp-yy" type="number" aria-label="expiry Year" placeholder="YY" maxlength="2">
+              <label class="cvc-label" for="cvc">CVC</label>
+              <input class="cvc-input" type="number" id="cvc" placeholder="e.g. 123">
+          </div>
+
+          <button class="btn-primary" type="submit">Confirm</button>
+        </form>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
