@@ -13,12 +13,19 @@ body {
 
 
 .container {
-    max-width: 500px;
+    max-width: 400px;
     position: relative;
     margin: 0 auto;
 }
 
-
+@media (min-width:1400px) {
+    .main {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+        align-items: center;
+    }
+}
 
 /* =================
     Cards Sections
@@ -48,7 +55,7 @@ body {
 .front-card {
     max-width: 280px;
     position: absolute;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 
@@ -56,6 +63,16 @@ body {
 .front-card-img {
     width: 100%;
     display: block;
+}
+
+@media (min-width:1400px) {
+    .card {
+        height: 100%;
+        width: 50vw;
+        margin: 0;
+        background-image: url(./images/bg-main-desktop.png);
+        border-right: 20vw solid #fff;
+    }
 }
 
 
@@ -75,6 +92,21 @@ body {
     letter-spacing: 2px;
 }
 
+@media (min-width:1400px) {
+
+    .back-card {
+        top: 350px;
+        right: -200px;
+        max-width: 350px;
+        box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .cvc-img {
+        top: 75px;
+        right: 45px;
+    }
+
+}
 
 /* Front Card */
 
@@ -107,32 +139,44 @@ body {
     text-transform: uppercase;
 }
 
+@media (min-width:1400px) {
+    .front-card {
+        max-width: 350px;
+        left: 200px;
+        top: 120px;
+        right: -200px;
+    }
+}
+
 /* ==================
     Form Section
    ==================*/
 
 input {
-    padding: 0.5em;
+    padding: 9px;
     font-family: 'Space Grotesk', sans-serif;
     color: hsl(278, 68%, 11%);
     font-size: 1rem;
     border: 1px solid hsl(279, 6%, 55%);
     border-radius: 7px;
-}
 
-/* FIX:: input border must be a gradient and round from corners */
+}
 
 input:hover,
 input:focus {
-    border-image-width: 2px;
-    border-image-source: linear-gradient(to right,hsl(249, 99%, 64%), hsl(278, 94%, 30%));
-    border-image-slice: 1%;
+    padding: 8px;
+    border: double 2px transparent;
+    background-image: linear-gradient(white, white), linear-gradient(to right,hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    background-origin: border-box;
+    /* First  */
+    background-clip: padding-box, border-box;
+    border-radius: 7px;
     outline: none;
 }
 
 .form {
     display: grid;
-    gap: .5em;
+    gap: 1em;
     padding: 0 1em;
     
 }
@@ -190,4 +234,21 @@ input:focus {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     background-color: #fff;
     background-image: linear-gradient(to right,hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    outline: none;
 }
+
+
+/* placeholder color change */
+
+::placeholder {
+    color: hsl(270, 3%, 87%);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: hsl(270, 3%, 87%);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: hsl(270, 3%, 87%);
+  }
