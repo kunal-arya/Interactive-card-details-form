@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"> 
 
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js" defer></script>
   <script src="./script.js" defer></script>
   <title>Interactive card details form</title>
 </head>
@@ -30,7 +31,9 @@
           <p class="card-number-img">0000 0000 0000 0000</p>
           <div class="card-info-img">
             <p class="card-name-img">Kunal arya</p>
-            <p class="card-exp-img">08/28</p>
+            <p class="card-exp-img">
+              <span id="card-mm">00</span>/<span id="card-yy">00</span>
+            </p>
           </div>
         </div>
       </div>
@@ -40,20 +43,20 @@
       <div class="container">
         <form class="form">
           <label for="cardholder-name">CARDHOLDER NAME</label>
-          <input type="text" id="cardholder-name" placeholder="e.g. Kunal Arya">
+          <input type="text" id="cardholder-name" placeholder="e.g. Kunal Arya" required>
   
           <label for="card-num">CARD NUMBER</label>
-          <input type="text" id="card-num" placeholder="e.g. 1234 5678 9123 0000">
+          <input type="text" id="card-num" placeholder="e.g. 1234 5678 9123 0000" required>
 
           <div class="card-extra-details">
               <label class="exp-label">EXP. DATE ( MM / YY )</label>
-              <input class="exp-mm" type="number" aria-label="expiry month" placeholder="MM" maxlength="2">
-              <input class="exp-yy" type="number" aria-label="expiry Year" placeholder="YY" maxlength="2">
+              <input class="exp-mm" type="number" aria-label="expiry month" placeholder="MM" required>
+              <input class="exp-yy" type="number" aria-label="expiry Year" placeholder="YY" required>
               <label class="cvc-label" for="cvc">CVC</label>
-              <input class="cvc-input" type="number" id="cvc" placeholder="e.g. 123">
+              <input class="cvc-input" type="number" id="cvc" placeholder="e.g. 123" required>
           </div>
 
-          <button class="btn-primary" type="submit">Confirm</button>
+          <button id="submit-btn" class="btn-primary" type="submit">Confirm</button>
         </form>
       </div>
     </section>
