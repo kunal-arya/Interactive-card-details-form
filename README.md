@@ -23,7 +23,7 @@
   
 ### Links  
 
-- Solution URL: [click here](https://your-solution-url.com)
+- Solution URL: [click here]([https://your-solution-url.com](https://github.com/kunal-arya/Interactive-card-details-form))
 - Live Site URL: [click here](https://interactive-card-details-form-k.netlify.app/)
 
 ## My Process
