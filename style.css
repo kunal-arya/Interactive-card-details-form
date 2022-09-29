@@ -237,6 +237,25 @@ input:focus {
     outline: none;
 }
 
+/* Complete  form */
+
+.complete-form {
+    display: grid;
+    padding: 1em;
+}
+
+.complete-form  img,
+.complete-form h2,
+.complete-form p {
+    justify-self: center;
+}
+
+@media (min-width:1400px) {
+    .complete-form {
+        width: 400px;
+    }
+}
+
 
 /* placeholder color change */
 

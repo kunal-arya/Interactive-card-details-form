@@ -5,6 +5,7 @@ const submitBtn = document.getElementById("submit-btn");
 const cardImgMM = document.getElementById("card-mm");
 const cardImgYY = document.getElementById("card-yy");
 const cardImgCvc = document.querySelector(".cvc-img");
+const formId = document.querySelector("#form-id");
 
 // Credit Card Number Formatting using Cleave.js
 let creditCardNumInput = new Cleave("#card-num", {
@@ -56,7 +57,19 @@ cardHolderName.addEventListener("input", () => {
 
 
 
-submitBtn.addEventListener("submit" , (e) => {
+submitBtn.addEventListener("click" , (e) => {
     // preventing the form default behaviour
     e.preventDefault();
-});
+
+    document.getElementById("form-id").innerHTML = `
+    <div class="complete-form">
+        <img src="./images/icon-complete.svg" alt="Icon Complete"/>
+        <h2>THANK YOU!</h2>
+        <p>We've added your card details</p>
+        <button onclick="continueBtnHandler()" class="btn-primary">Continue</button>
+  </div>`
+})
+
+function continueBtnHandler() {
+    location.reload();
+}
